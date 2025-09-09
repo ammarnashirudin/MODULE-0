@@ -62,11 +62,10 @@ function sumArrays(arr1, arr2) {
   }
   return result;
 }
+let x= [1,3,5,6];
+let y= [2,5,7,3];
+console.log(sumArrays(x, y));
 
-let a = [1, 2, 3, 4];
-let b = [5, 6, 7, 8];
-
-console.log(sumArrays(a, b));
 
 // PAGE 2
 // Write a function that adds an element to the end of an array. However, the element should only be added if it is not already in the array
@@ -149,13 +148,13 @@ console.log(differenceArr(a, b));
 
 // 1
 
-console.log(typeof 1);
-console.log(typeof "");
-console.log(typeof null);
-console.log(typeof undefined);
-console.log(typeof true);
-console.log(typeof []);
-console.log(typeof {});
+// console.log(typeof 1);
+// console.log(typeof "");
+// console.log(typeof null);
+// console.log(typeof undefined);
+// console.log(typeof true);
+// console.log(typeof []);
+// console.log(typeof {});
 
 function primitiveOnly(arr) {
   const result = [];
