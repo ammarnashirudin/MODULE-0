@@ -2,7 +2,7 @@
 console.log("No 1");
 
 function calculateStudentData(students) {
-  // Jika array kosong
+  
   if (students.length === 0) {
     return {
       score: { highest: null, lowest: null, average: null },
@@ -10,27 +10,26 @@ function calculateStudentData(students) {
     };
   }
 
-  // Simpan umur dan nilai di array biasa
+  
   let ages = [];
   let scores = [];
 
   for (let i = 0; i < students.length; i++) {
     let student = students[i];
 
-    // hitung umur manual
     let today = new Date();
     let age = today.getFullYear() - student.age.getFullYear();
 
     let monthDiff = today.getMonth() - student.age.getMonth();
     if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < student.age.getDate())) {
-      age = age - 1; // koreksi kalau ulang tahun belum lewat
+      age = age - 1; 
     }
 
     ages.push(age);
     scores.push(student.score);
   }
 
-  // hitung total
+  
   let totalScore = 0;
   let totalAge = 0;
   for (let j = 0; j < scores.length; j++) {
@@ -38,11 +37,10 @@ function calculateStudentData(students) {
     totalAge = totalAge + ages[j];
   }
 
-  // hitung rata-rata
+  
   let avgScore = totalScore / scores.length;
   let avgAge = totalAge / ages.length;
 
-  // cari nilai tertinggi/terendah
   let highestScore = Math.max.apply(null, scores);
   let lowestScore = Math.min.apply(null, scores);
   let highestAge = Math.max.apply(null, ages);
@@ -62,7 +60,7 @@ function calculateStudentData(students) {
   };
 }
 
-// 🔹 Contoh penggunaan
+
 let students = [
   { name: "Ammar", email: "ammar@mail.com", age: new Date(2000, 5, 10), score: 85 },
   { name: "Budi", email: "budi@mail.com", age: new Date(1998, 2, 20), score: 92 },

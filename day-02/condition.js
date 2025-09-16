@@ -78,3 +78,111 @@ switch (buah) {
   default:
     console.log("buah tidak terdaftar");
 }
+
+// Lattihan
+function X (number){
+  if(number>0){
+  return "Bilangan Positif";
+  }
+  else{"Bilangan Negatif"}
+}
+console.log(X(4));
+
+function age(number){
+  if (number>=18){
+    return "Dewasa"
+  }
+  else {
+    return "Belum Dewasa"
+  }
+}
+
+console.log(age(18));
+
+function value(number){
+  if (number>=75){
+    return "Lulus"
+  }
+  else {return "Tidak Lulus"
+  }
+}
+console.log(value(60));
+
+function bilangan(number){
+  if (number % 2 === 0){
+    return "Bilangan Genap"
+  }
+  else {return "Bilangan Ganjil"}
+}
+
+console.log(bilangan(2));
+
+function Jam(number){
+  if (number < 12){
+    return "Selamat Pagi"
+  }
+  else if(number >= 12 && number < 18){
+    return "Selamat Siang"
+  }
+  else if (number >= 18){
+    return "Selamat Malam"
+  }
+}
+
+console.log(Jam(12));
+
+function terbesar(a,b,c){
+  if (a>b && a>c){
+    return a
+  }
+  else if (b>c && b>a){
+    return b
+  }
+  else {return c}
+}
+console.log(terbesar(2,6,1));
+
+function input(number){
+  if (1 <= number && 100 >= number){
+    if (number >= 90){
+      return "A"
+    }
+    else if(number <= 80 || number >= 89){
+      return "B"
+    }
+    else if(number <= 70 || number >= 79){
+      return "C"
+    }
+    else if(number <= 60 || number >= 69){
+      return "D"
+    }
+    else if(number < 60){
+      return "E"
+    }
+  }
+}
+
+console.log(input(70));
+
+function login(username, password){
+  if(username == "admin" && password == "1234"){
+    return "Login Berhasil"
+  }
+  else if(username !== "admin") {
+    return "username salah"
+  }
+  else if(password !== "1234") {
+    return "password salah"
+  }
+}
+console.log(login("admin", "12"));
+
+function year (number){
+  if (number % 4 == 0 && number % 100 !== 0 || number % 400 == 0){ 
+    return "Tahun Kabisat"
+  }
+  else {return "Bukan Tahun Kabisat"}
+}
+
+console.log(year(400));
+

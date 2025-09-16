@@ -72,3 +72,107 @@ if (buah === "apel" && buah === "jeruk") {
 } else {
   console.log("Buah tidak dijual");
 }
+
+// Latihan
+
+function exam(batas_atas, batas_bawah){
+  for(let i = batas_bawah; i <= batas_atas; i++){
+    console.log(i);
+    
+  }
+      
+}
+
+console.log(exam(100, 20));
+
+function forloop(atas, bawah){
+  for(let a = bawah; a <= atas; a++){
+    console.log(a);
+  }
+}
+
+console.log(forloop(100,30));
+
+function loop(ats, bwh){
+  for(let s = bwh; s <= ats; s++){
+    console.log(s);
+  }
+}
+console.log(loop(200, 2));
+
+function multiplicatio (number){
+  for(let i = 1 ; i <= number ; i++){
+    console.log(i*number);
+  }
+}
+
+console.log(multiplicatio(10));
+
+
+function sqas(number){
+  let sum = 0;
+  for(let i = 1; i <= number ; i++){ 
+    sum += i;
+   }
+   console.log("Hasil Penjumlahan",sum);
+}
+sqas(100);
+
+
+function factorial(number){
+  let sum = 1;
+  for(let i = 1; i <= number; i++){
+    sum *= i;
+  }
+  console.log("Hasil Faktorial :", sum);
+}
+
+factorial(40)
+
+
+function segitigaBintang(baris) {
+  for (let i = 1; i <= baris; i++) {
+    let bintang = "";
+    for (let j = 1; j <= i; j++) {
+      bintang += "*";
+    }
+    console.log(bintang);
+  }
+}
+
+segitigaBintang(5);
+
+function segitigaTerbalik(number){
+  for(let i = number; i >= 1 ; i--){
+    let bintang = "";
+    for(let j = 1 ; j <= i; j++){
+      bintang += "*";
+    }
+    console.log(bintang);
+  }
+  
+}
+console.log(segitigaTerbalik(5));
+
+function persegi(number){
+  let row = "";
+  for(let i = 0; i < number; i++){
+    row += "*";
+    for(let j = 0; j < i; j++){
+      console.log(row);
+    }
+  }
+}
+console.log(persegi(5));
+
+function fibonachi(number){
+  let a = 0, b = 1;
+  for(let i = 0 ; i < number; i++){
+    console.log(a);
+    let next = a + b;
+    a = b;
+    b = next;
+  }
+}
+
+fibonachi(12)

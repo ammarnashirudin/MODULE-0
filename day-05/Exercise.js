@@ -36,18 +36,13 @@ console.log(gabungan(kata));
 // 3
 console.log("Write a function from a given array of numbers and return the second smallest number");
 function secondSmallest(arr) {
-  let min1 = Infinity, min2 = Infinity;
+  arr.sort((a, b) => a - b);
 
-  for (let num of arr) {
-    if (num < min1) {
-      min2 = min1;
-      min1 = num;
-    } else if (num > min1 && num < min2) {
-      min2 = num;
-    }
+  if (arr.length < 2) {
+    return null;
   }
 
-  return min2 === Infinity ? null : min2;
+  return arr[1]; 
 }
 
 console.log(secondSmallest([5, 2, 8, 1, 3])); 
@@ -106,11 +101,12 @@ function LimitArray (maxx){
     for (let nums of num ){
       if (arr.length < maxx){
         arr.push(nums);
-      } else {console.log("Arr is Full, Cannot Insert");
+      } else {
+        console.log("Arr is Full, Cannot Insert");
       }
     }
+    return arr
   }
-  return arr
 }
 const limit = LimitArray (5);
 console.log(limit([5, 10, 24, 3, 6]));
